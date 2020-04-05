@@ -1,0 +1,129 @@
+*{
+	box-sizing: border-box;
+	outline-style:none;
+	box-shadow:none;
+	border-color:transparent;
+	
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */
+}
+
+body{	
+	background:black;
+	font-family:courier new;
+	margin:0px;
+}
+.calculator_container{
+	background: #888;
+    color: #333;
+    border: solid 1px #ccc;
+    border-radius: 15px;    
+    width: 95%;
+    max-width: 600px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 220px;    
+}
+.calculator_header{
+	background: #333;
+    color: #888;
+	padding:10px 20px;
+	border-radius:15px 15px 0px 0px;
+	position:relative;
+	z-index:1;
+}
+.calculator{
+	padding:20px;
+}
+.calculator_container h1{
+	margin:0px;
+	font-size:24px;
+	line-height:24px;
+}
+.calculator_container h1 span{
+	color:black;
+	font-size:28px;
+	line-height:24px;
+}
+.calculator_container h2{
+	margin: 0px 0px 5px 0px;
+    font-size: 14px;
+    line-height: 14px;
+	height:14px;
+}
+#input_value{
+	background:#e6e6e6;
+	border:solid 1px #333;
+	padding:5px 10px;
+	margin:10px 0px;
+	border-radius:15px;
+	width:100%;
+	height:35px;
+	color:#333;
+	font-family:courier new;
+}
+.math_operation{
+	display:inline-block;
+	width:25%;
+	padding:0px 5px 0px 0px;
+}
+.math_operation:last-child{
+	padding:0px;
+}
+.math_button{
+	background:#333;
+	border:solid 1px #1a1a1a;
+	padding:5px 10px;
+	border-radius:15px;
+	width: 100%;
+    height: 35px;
+	cursor:pointer;
+}
+.reset_container{
+	margin: 10px 0px;
+    text-align: center;
+    position: absolute;
+    z-index: 999;
+    top: -40px;
+    right: -32px;
+}
+.reset_button{
+	background: #888;
+    color: #333;
+    border: solid 1px #ccc;
+	padding:5px 10px;
+	border-radius:100%;
+	width:60px;
+	height:60px;
+	font-size:14px;
+	cursor:pointer;
+}
+
+@media (max-width: 480px) {
+	.calculator_container{		
+		height: 250px;    
+	}
+	.calculator_container h1{
+		font-size:20px;
+		line-height:20px;
+	}
+	.calculator_container h1 span{
+		font-size:24px;
+		line-height:20px;
+	}
+    .math_operation{
+		display:inline-block;
+		width:50%;
+		padding:5px!important;
+	}
+	.reset_container {    
+		top: -45px;
+		right: 20px;
+	}
+}
